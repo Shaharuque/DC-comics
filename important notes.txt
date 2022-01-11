@@ -1,0 +1,11 @@
+1.height: 100vh; means screen size 100px holey banner size 100px hobey abr screen height600px holey baanner o 600px hobey
+here we are not using direct px format cuz device screen a dekhtey prob hotey parey.
+
+2.max-width:1200px; means heighest 1200px width hotey parbey bt screen size 1200 ar kom holeo prob nai(responsive korar jnno onk helpful)
+
+3..banner-title::before{ //psedue element
+}
+4.<a href="https://www.dccomics.com/characters" target="_blank"> //link opens in new tab
+5. display: flex;
+    justify-content: center; /*left-right a element center hobey*/
+    align-items: center;    /*top-bottom a element center hobey*/

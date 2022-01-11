@@ -1,0 +1,311 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Poppins&family=Raleway:wght@500;700&family=Urbanist:wght@100;200;500&display=swap');
+
+*{    /* '*' diye sob html tag select kora hoy bujhay and default margin padding remove ar jnno we will do this */
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #121212;
+    font-family: 'Raleway', sans-serif;
+    
+}
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.banner{
+    display: flex;
+    height: 100vh;  /*height: 100vh; means screen size 100px holey banner size 100px hobey abr screen height600px holey baanner o 600px hobey */  
+    flex-wrap: wrap;
+}
+.banner-left{
+     /*flex:1; means parent banner ar half portion for banner-left and half portion for banner-right*/
+     width: 50%;
+     color: white;
+     display: flex;
+     justify-content: center; /*left-right a element center hobey*/
+     align-items: center;    /*top-bottom a element center hobey*/
+     
+}
+.banner-title{
+    font-size: 60px;
+     /*jar shapekhey sorbey tar position relative korey ditey hobey*/
+    white-space: nowrap;
+    position: relative;
+    color: transparent;
+
+}
+.banner-title::before{
+    content: 'DC Comics Heros';
+    color: aqua;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: typing 4s linear  infinite;  /*cuz ai title ar opor animation hobey*/
+}
+@keyframes typing {
+    0% {
+        content: 'D|';
+    }
+
+    4% {
+        content: 'DC|';
+    }
+
+    6% {
+        content: 'DC |';
+    }
+
+    8%{
+        content: 'DC C|';
+    }
+
+    12% {
+        content: 'DC Co|';
+    }
+
+    16% {
+        content: 'DC Com|';
+    }
+
+    20% {
+        content: 'DC Comi|';
+    }
+
+    24% {
+        content: 'DC Comic|';
+    }
+
+    28% {
+        content: 'DC Comics|';
+    }
+
+    32% {
+        content: 'DC Comics |';
+    }
+
+    36% {
+        content: 'DC Comics H|';
+    }
+
+    40% {
+        content: 'DC Comics He|';
+    }
+
+    44% {
+        content: 'DC Comics Her|';
+    }
+
+    48% {
+        content: 'DC Comics Hero|';
+    }
+
+    52% {
+        content: 'DC Comics Heros|';
+    }
+    53%,
+    83% {
+        content: 'DC Comics Heros|';
+    }
+
+    84% {
+        content: 'DC Comics Hero|';
+    }
+
+    85% {
+        content: 'DC Comics Her|';
+    }
+
+    86% {
+        content: 'DC Comics He|';
+    }
+
+    87% {
+        content: 'DC Comics H|';
+    }
+
+    88% {
+        content: 'DC Comics |';
+    }
+
+    89% {
+        content: 'DC Comics|';
+    }
+
+    90% {
+        content: 'DC Comic|';
+    }
+
+    91% {
+        content: 'DC Comi|';
+    }
+
+    92% {
+        content: 'DC Com|';
+    }
+
+    93% {
+        content: 'DC Co|';
+    }
+
+    94% {
+        content: 'DC C|';
+    }
+
+    96% {
+        content: 'DC |';
+    }
+
+    97% {
+        content: 'DC|';
+    }
+
+    98% {
+        content: 'D|';
+    }
+
+    99% {
+        content: '|';
+    }
+    100% {
+        content: '|';
+    }
+}
+.banner-text{
+    margin-top: 10px;
+}
+.banner-read{
+    margin-top: 15px;
+    background-color: blueviolet;
+    border-radius: 5px;
+    padding: 5px;
+    border: 2px solid blueviolet;
+    color: azure; 
+    cursor: pointer;
+    transition: background-color 0.5s linear, border 0.5s linear;
+}
+.banner-read:hover{    /* mouse button ar kachey dhorley color change hobey*/
+    background-color: aqua;
+    border: 2px solid rgb(32, 207, 207);
+}
+.banner-right{   
+    width: 50%;
+    display: flex;
+    justify-content: center; /*left-right a element center hobey*/
+    align-items: center;    /*top-bottom a element center hobey*/
+}
+.banner-right img{
+    height: 500px;
+    width: 500px;
+    border: 3px solid aqua;
+}
+
+
+
+
+.galary-title{
+    display: flex;
+    justify-content: center;
+    color: aqua;
+}
+.hero-galary{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;    /*responsive ar kaj korey*/
+}
+.photo{
+    margin: 50px;
+    height: 280px;
+    width: 280px;
+    position: relative; /*border gulo photo r under a kaj korbey*/
+    overflow: hidden;  /*photo div ar bairey ja thakbey sob hidden hoa jabey*/
+}
+.photo img{
+    width: 100%;  /*photo div ar jei height and width img o same heigh and width pacchey*/
+    height: 100%;
+    object-fit: cover; /*image ratio thik rakhar jnno*/
+}
+.border{
+    background-color:lightseagreen;
+    position: absolute;
+    transition: 0.75s linear;
+}
+.border.top,.border.bottom{      /*same element ar doit class tai aibhabey .border.top likha hoy*/
+    height: 4px;
+    width:270px;
+}
+.border.left,.border.right{
+    height: 270px;
+    width: 4px;
+}
+.border.top{
+    top: 0px;
+    right: 100%;
+}
+.border.bottom{
+    bottom: 0px;
+    left: 100%;
+}
+.border.left{
+    left:0px;
+    top: 100%;
+}
+.border.right{
+    right:0px;
+    bottom:100% ;
+}
+.photo:hover .border.top{
+    right: 5px;
+}
+.photo:hover .border.bottom{
+    left: 5px;
+}
+.photo:hover .border.left{
+    top: 5px;
+}
+.photo:hover .border.right{
+    bottom: 5px;
+}
+
+.hero-description{
+    position: absolute;
+    top:0;
+    left: 0;
+    color: rgb(240, 128, 221);
+    padding-left: 10px;
+    height: 100%;
+    width: 100%;
+    transform: translateY(400px);
+    transition: .50s ease-out;
+}
+
+.photo:hover .hero-description{ /*mouse ohoto tey nibo ar hero description show hobey*/
+    transform: translateY(50px);
+}
+.photo::before{
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    top: 0;
+    left: 0;
+    transition: .3s linear;
+}
+.photo:hover::before{
+    opacity: 1;
+    cursor: pointer;
+}
+
+
+footer{
+    display:flex ;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+}
+.name{
+    font-size: 25px;
+    color: aqua;
+}
